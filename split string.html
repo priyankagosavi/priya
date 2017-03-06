@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>String Split</title>
+
+
+
+
+</head>
+<body >
+
+
+<input type="text" style="width: 1000px" id="p"   >
+
+<input type="submit" value="Submit" onclick="split()">
+
+
+<input type="text" id="p1" >
+
+
+<script type="text/javascript">
+function split() {
+	
+
+	var str = document.getElementById("p").value;
+	
+	var result = str.match( /[^\.!\?]+[\.!\?]+/g );
+	alert(result)
+	
+	var pqr=0;
+	var xyz = [];
+	
+	for( var i =0; i <result.length; i++){
+		
+		 xyz[i] = result[i].trim().split(/\s+/).length;
+		
+		 if(xyz[i]>pqr){
+			 var pqr=xyz[i]
+			 
+		 }
+		
+	}
+	
+	document.getElementById("p1").value=pqr;
+	
+}
+
+
+
+</script>
+
+</body>
+</html>
