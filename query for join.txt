@@ -1,0 +1,7 @@
+
+
+
+( " select Employee.count(EmpNo), Department.DeptName from Employee inner join Department where Employee.DeptNo=Department.deptNo ")
+while(rs.next()){
+		rs.getString(2) +"="+rs.getString(1);
+			}
